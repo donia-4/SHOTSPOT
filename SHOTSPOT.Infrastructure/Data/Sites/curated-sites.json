@@ -1,0 +1,111 @@
+{
+  "dataset": {
+    "id": "nasa-pgda-product-78",
+    "name": "NASA GSFC PGDA Product 78 — LOLA 5 m/px",
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/78",
+    "format": "GeoTIFF",
+    "bandCount": 1,
+    "dataType": "float32",
+    "noDataValue": "NaN",
+    "pixelSizeMeters": 5,
+    "projection": {
+      "type": "Polar Stereographic",
+      "proj4": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +x_0=0 +y_0=0 +R=1737400 +units=m"
+    },
+    "elevationReference": {
+      "shape": "Sphere",
+      "radiusMeters": 1737400,
+      "note": "Elevations are relative to the 1737.4 km reference sphere; negative values are valid."
+    },
+    "notes": [
+      "Within each site, all raster files share the same grid.",
+      "The _0001_err.tif file is a Monte Carlo DEM clone, not a pixel-count raster.",
+      "Validate the requested coordinates and analysis radius against the actual GeoTIFF bounds before running terrain analysis.",
+      "The supplied pre-signed download URLs are intentionally not stored here because they expire. Use authorized S3 credentials or another durable access method."
+    ]
+  },
+  "sites": [
+    {
+      "id": "site-01",
+      "name": "Site 01",
+      "latitude": -89.46,
+      "longitude": -137.49,
+      "description": "South polar candidate site; 16 × 16 km LOLA terrain coverage.",
+      "source": {
+        "name": "NASA GSFC PGDA — Product 78",
+        "url": "https://pgda.gsfc.nasa.gov/products/78"
+      },
+      "dem": {
+        "provider": "AWS S3",
+        "bucket": "shot-spot",
+        "region": "eu-north-1",
+        "prefix": "pgda78/Site01/",
+        "files": {
+          "elevation": "Site01_final_adj_5mpp_surf.tif",
+          "slope": "Site01_final_adj_5mpp_slp.tif",
+          "elevationUncertainty": "Site01_final_adj_5mpp_toterr.tif",
+          "slopeUncertainty": "Site01_final_adj_5mpp_slperr.tif"
+        },
+        "widthPixels": 3200,
+        "heightPixels": 3200,
+        "coverageWidthMeters": 16000,
+        "coverageHeightMeters": 16000
+      }
+    },
+    {
+      "id": "site-20",
+      "name": "Site 20",
+      "latitude": -85.43,
+      "longitude": 31.74,
+      "description": "South polar candidate site; 16 × 16 km LOLA terrain coverage.",
+      "source": {
+        "name": "NASA GSFC PGDA — Product 78",
+        "url": "https://pgda.gsfc.nasa.gov/products/78"
+      },
+      "dem": {
+        "provider": "AWS S3",
+        "bucket": "shot-spot",
+        "region": "eu-north-1",
+        "prefix": "pgda78/Site20/",
+        "files": {
+          "elevation": "Site20_final_adj_5mpp_surf.tif",
+          "slope": "Site20_final_adj_5mpp_slp.tif",
+          "elevationUncertainty": "Site20_final_adj_5mpp_toterr.tif",
+          "slopeUncertainty": "Site20_final_adj_5mpp_slperr.tif",
+          "monteCarloDemClone": "Site20_final_adj_5mpp_0001_err.tif"
+        },
+        "widthPixels": 3200,
+        "heightPixels": 3200,
+        "coverageWidthMeters": 16000,
+        "coverageHeightMeters": 16000
+      }
+    },
+    {
+      "id": "site-23",
+      "name": "Site 23",
+      "latitude": -86.0,
+      "longitude": -0.24,
+      "description": "South polar candidate site; 21 × 21 km LOLA terrain coverage.",
+      "source": {
+        "name": "NASA GSFC PGDA — Product 78",
+        "url": "https://pgda.gsfc.nasa.gov/products/78"
+      },
+      "dem": {
+        "provider": "AWS S3",
+        "bucket": "shot-spot",
+        "region": "eu-north-1",
+        "prefix": "pgda78/Site23/",
+        "files": {
+          "elevation": "Site23_final_adj_5mpp_surf.tif",
+          "slope": "Site23_final_adj_5mpp_slp.tif",
+          "elevationUncertainty": "Site23_final_adj_5mpp_toterr.tif",
+          "slopeUncertainty": "Site23_final_adj_5mpp_slperr.tif"
+        },
+        "widthPixels": 4200,
+        "heightPixels": 4200,
+        "coverageWidthMeters": 21000,
+        "coverageHeightMeters": 21000
+      }
+    }
+  ]
+}

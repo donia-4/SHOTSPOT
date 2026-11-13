@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.11.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.17" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SHOTSPOT.Domain\SHOTSPOT.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Features\Analysis\Commands\" />
+	  <Folder Include="Features\Analysis\Dtos\" />
+	  <Folder Include="Features\Analysis\Queries\" />
+	  <Folder Include="Features\Scenarios\Commands\" />
+	  <Folder Include="Features\Scenarios\Dtos\" />
+	  <Folder Include="Features\Scenarios\Queries\" />
+	  <Folder Include="Features\Sites\Commands\" />
+	  <Folder Include="Features\Sites\Dtos\" />
+	</ItemGroup>
+
+
+</Project>
